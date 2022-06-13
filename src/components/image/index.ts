@@ -1,109 +1,115 @@
-import { LitElement, html } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
-import { Coordinates, FocalPoint, Udi } from '../../types';
-import { getService } from '../../base/angular';
+import { LitElement, html } from 'lit'
+import { customElement, property, state } from 'lit/decorators.js'
+import { Coordinates, FocalPoint, Udi } from '../../types'
+import { getService } from '../../base/angular'
 
 @customElement('umbh-image')
 export default class extends LitElement {
   @property({ type: String })
-  alt?: string;
+  alt?: string
 
   @property({ type: Object })
-  coordinates?: Coordinates;
+  coordinates?: Coordinates
 
   @property({ type: Object, attribute: 'focal-point' })
-  focalPoint?: FocalPoint;
+  focalPoint?: FocalPoint
 
   // TODO: Change to enum
   @property({ type: String })
-  mode?: string;
+  mode?: string
 
   @property({ type: String })
-  udi: Udi;
+  udi: Udi
 
   @property({ type: Number })
-  height?: number;
+  height?: number
 
   @property({ type: Number })
-  width?: number;
+  width?: number
 
   /**
    * @internal
    */
   @state()
-  loading: boolean = false;
+  loading: boolean = false
 
   /**
    * @internal
    */
   @state()
-  media?: object;
+  media?: object
 
   /**
    * @internal
    */
-  connectedCallback() {
-    super.connectedCallback();
-    this.loadMedia();
+  connectedCallback (): void {
+    super.connectedCallback()
+    this.loadMedia()
+      .catch(() => {
+        this.loading = false
+      })
   }
 
   /**
    * @internal
    */
-  updated(props) {
-    if (props.get('udi')) {
-      this.loadMedia();
+  updated (props): void {
+    if (props.get('udi') !== undefined) {
+      this.loadMedia()
+        .catch(() => {
+          this.loading = false
+        })
     }
   }
 
   /**
    * @internal
    */
-  async loadMedia() {
-    this.loading = true;
-    this.media = await getService('entityResource').getById(this.udi, 'Media');
-    this.loading = false;
+  async loadMedia (): Promise<void> {
+    this.loading = true
+    this.media = await getService('entityResource').getById(this.udi, 'Media')
+    this.loading = false
   }
 
   /**
    * @internal
    */
-  getUrl() {
-    let sep = '?';
-    let url = this.media.metaData.MediaPath;
+  getUrl (): string {
+    let sep = '?'
+    let url = this.media?.metaData?.MediaPath as string
 
-    if (this.width) {
-      sep = '&';
-      url += `?width=${this.width}`;
+    if (url === undefined) return ''
+
+    if (this.width !== undefined && this.width !== null) {
+      sep = '&'
+      url += `?width=${String(this.width)}`
     }
 
-    if (this.height) {
-      sep = '&';
-      url += `${sep}height=${this.height}`;
+    if (this.height !== undefined && this.height !== null) {
+      sep = '&'
+      url += `${sep}height=${String(this.height)}`
     }
 
-    if (this.coordinates) {
-      url += `${sep}crop=${this.coordinates.x1},${this.coordinates.y1},${this.coordinates.x2},${this.coordinates.y2}&mode=percentage`;
-    } else if (this.focalPoint) {
-      url += `${sep}center=${this.focalPoint.top},${this.focalPoint.left}&mode=crop`;
+    if (this.coordinates !== undefined && this.coordinates !== null) {
+      url += `${sep}crop=${String(this.coordinates.x1)},${String(this.coordinates.y1)},${String(this.coordinates.x2)},${String(this.coordinates.y2)}&mode=percentage`
+    } else if (this.focalPoint !== undefined && this.focalPonit !== null) {
+      url += `${sep}center=${String(this.focalPoint.top)},${String(this.focalPoint.left)}&mode=crop`
     } else {
-      url += `${sep}mode=crop`;
+      url += `${sep}mode=crop`
     }
 
-    return url;
+    return url
   }
 
   /**
    * @internal
    */
-  render() {
-    if (!this.media || this.loading) return html`<p>loading...</p>`;
+  render (): any {
+    if ((this.media === undefined || this.media === null) || this.loading) return html`<p>loading...</p>`
     const url = this.getUrl()
 
-    if (this.mode === 'cover')
-      return html`<div style="background: url(${url}); background-size: cover; width: 100%; aspect-ratio: ${this.width ?? 1}/${this.height ?? 1}; overflow: hidden"></div>`;
+    if (this.mode === 'cover') { return html`<div style="background: url(${url}); background-size: cover; width: 100%; aspect-ratio: ${this.width ?? 1}/${this.height ?? 1}; overflow: hidden"></div>` }
 
-    return html`<img src=${url} alt=${this.alt} height=${this.height} width=${this.width}>`;
+    return html`<img src=${url} alt=${this.alt} height=${this.height} width=${this.width}>`
   }
 }
-

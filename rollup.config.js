@@ -1,16 +1,16 @@
 // Import rollup plugins
-import {terser} from 'rollup-plugin-terser';
-import resolve from '@rollup/plugin-node-resolve';
-import summary from 'rollup-plugin-summary';
-import typescript from '@rollup/plugin-typescript';
-import cleaner from 'rollup-plugin-cleaner';
+import { terser } from 'rollup-plugin-terser'
+import resolve from '@rollup/plugin-node-resolve'
+import summary from 'rollup-plugin-summary'
+import typescript from '@rollup/plugin-typescript'
+import cleaner from 'rollup-plugin-cleaner'
 
 export default {
   input: './src/index.ts',
   plugins: [
     cleaner({
       targets: [
-        './dist/',
+        './dist/'
       ]
     }),
     typescript(),
@@ -18,15 +18,14 @@ export default {
     terser({
       ecma: 2020,
       module: true,
-      warnings: true,
+      warnings: true
     }),
-    summary(),
+    summary()
   ],
   output: {
     dir: './dist',
     format: 'es',
-    sourcemap: true,
+    sourcemap: true
   },
-  preserveEntrySignatures: 'strict',
-};
-
+  preserveEntrySignatures: 'strict'
+}

@@ -1,26 +1,26 @@
-import { Coordinates, CropSize, FocalPoint, Udi } from '../../types';
-import { editorService } from '../../base/angular';
+import { Coordinates, CropSize, FocalPoint, Udi } from '../../types'
+import { editorService } from '../../base/angular'
 
-export type MediaPickerItem = {
-  altText: String | undefined;
-  caption: String | undefined;
-  coordinates: Coordinates | undefined;
-  focalPoint: FocalPoint | undefined;
-  udi: String;
+export interface MediaPickerItem {
+  altText: String | undefined
+  caption: String | undefined
+  coordinates: Coordinates | undefined
+  focalPoint: FocalPoint | undefined
+  udi: String
 }
 
-export type MediaPickerConfig = {
-  allowMediaEdit: Boolean | undefined;
-  cropSize: CropSize | undefined;
-  disableFocalPoint: Boolean | undefined;
-  disableFolderSelect: Boolean | undefined;
-  startNode: Udi | undefined;
-  selection: MediaPickerItem | undefined;
-  multiple: Boolean | undefined;
-  onlyImages: Boolean | undefined;
-  onlyFolders: Boolean | undefined;
-  showDetails: Boolean | undefined;
-  submit: (items: MediaPickerItem[]) => void;
+export interface MediaPickerConfig {
+  allowMediaEdit: Boolean | undefined
+  cropSize: CropSize | undefined
+  disableFocalPoint: Boolean | undefined
+  disableFolderSelect: Boolean | undefined
+  startNode: Udi | undefined
+  selection: MediaPickerItem | undefined
+  multiple: Boolean | undefined
+  onlyImages: Boolean | undefined
+  onlyFolders: Boolean | undefined
+  showDetails: Boolean | undefined
+  submit: (items: MediaPickerItem[]) => void
 }
 
 export default {
@@ -37,18 +37,17 @@ export default {
       onlyFolders: config.onlyFolders,
       showDetails: config.showDetails,
       close: () => {
-        editorService.close();
+        editorService.close()
       },
       submit: (model: any) => {
-        editorService.close();
+        editorService.close()
         config.submit(model.selection.map((item: any) => ({
           altText: item.altText,
           caption: item.caption,
           coordinates: item.coordinates,
           focalPoint: item.focalPoint,
-          udi: item.udi,
-        })));
-      },
+          udi: item.udi
+        })))
+      }
     })
 }
-
