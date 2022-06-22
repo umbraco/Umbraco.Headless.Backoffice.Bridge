@@ -3,6 +3,17 @@ import { customElement, property, state } from 'lit/decorators.js'
 import { Coordinates, FocalPoint, Udi } from '../../types'
 import { getService } from '../../base/angular'
 
+type Media = {
+  metaData?: {
+    MediaPath?: string
+  }
+}
+
+export enum Mode {
+  Default = '',
+  Cover = 'cover'
+}
+
 @customElement('umbh-image')
 export default class extends LitElement {
   @property({ type: String })
@@ -14,11 +25,11 @@ export default class extends LitElement {
   @property({ type: Object, attribute: 'focal-point' })
   focalPoint?: FocalPoint
 
-  // TODO: Change to enum
   @property({ type: String })
-  mode?: string
+  mode?: Mode
 
   @property({ type: String })
+  // @ts-ignore
   udi: Udi
 
   @property({ type: Number })
@@ -27,21 +38,12 @@ export default class extends LitElement {
   @property({ type: Number })
   width?: number
 
-  /**
-   * @internal
-   */
   @state()
-  loading: boolean = false
+  private loading: boolean = false
 
-  /**
-   * @internal
-   */
   @state()
-  media?: object
+  private media?: Media
 
-  /**
-   * @internal
-   */
   connectedCallback (): void {
     super.connectedCallback()
     this.loadMedia()
@@ -50,10 +52,7 @@ export default class extends LitElement {
       })
   }
 
-  /**
-   * @internal
-   */
-  updated (props): void {
+  updated (props: any): void {
     if (props.get('udi') !== undefined) {
       this.loadMedia()
         .catch(() => {
@@ -62,19 +61,13 @@ export default class extends LitElement {
     }
   }
 
-  /**
-   * @internal
-   */
-  async loadMedia (): Promise<void> {
+  private async loadMedia (): Promise<void> {
     this.loading = true
     this.media = await getService('entityResource').getById(this.udi, 'Media')
     this.loading = false
   }
 
-  /**
-   * @internal
-   */
-  getUrl (): string {
+  private getUrl (): string {
     let sep = '?'
     let url = this.media?.metaData?.MediaPath as string
 
@@ -92,7 +85,7 @@ export default class extends LitElement {
 
     if (this.coordinates !== undefined && this.coordinates !== null) {
       url += `${sep}crop=${String(this.coordinates.x1)},${String(this.coordinates.y1)},${String(this.coordinates.x2)},${String(this.coordinates.y2)}&mode=percentage`
-    } else if (this.focalPoint !== undefined && this.focalPonit !== null) {
+    } else if (this.focalPoint !== undefined && this.focalPoint !== null) {
       url += `${sep}center=${String(this.focalPoint.top)},${String(this.focalPoint.left)}&mode=crop`
     } else {
       url += `${sep}mode=crop`
@@ -101,14 +94,11 @@ export default class extends LitElement {
     return url
   }
 
-  /**
-   * @internal
-   */
   render (): any {
     if ((this.media === undefined || this.media === null) || this.loading) return html`<p>loading...</p>`
     const url = this.getUrl()
 
-    if (this.mode === 'cover') { return html`<div style="background: url(${url}); background-size: cover; width: 100%; aspect-ratio: ${this.width ?? 1}/${this.height ?? 1}; overflow: hidden"></div>` }
+    if (this.mode === Mode.Cover) { return html`<div style="background: url(${url}); background-size: cover; width: 100%; aspect-ratio: ${this.width ?? 1}/${this.height ?? 1}; overflow: hidden"></div>` }
 
     return html`<img src=${url} alt=${this.alt} height=${this.height} width=${this.width}>`
   }
