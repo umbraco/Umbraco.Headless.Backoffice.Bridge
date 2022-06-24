@@ -5,6 +5,7 @@ const injector = window.angular?.element(document.body)?.injector()
 export interface EditorService {
   close: Function
   mediaPicker: Function
+  contentPicker: Function
 }
 
 export const getService: any = (service: string) => injector.get(service)
@@ -12,5 +13,6 @@ export const editorService: EditorService = injector !== undefined
   ? getService('editorService')
   : {
       close: () => {},
+      contentPicker: () => {},
       mediaPicker: () => {}
     }
