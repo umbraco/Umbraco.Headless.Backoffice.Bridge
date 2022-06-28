@@ -1,3 +1,2 @@
-export * from './components'
-export * from './pickers'
-export * from './types'
+export * from './components/index.js'
+export * from './pickers/index.js'

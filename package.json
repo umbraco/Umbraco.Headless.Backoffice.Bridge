@@ -1,20 +1,112 @@
 {
-  "name": "@umbraco/headless-backoffice",
+  "name": "@umbraco/headless-backoffice-bridge",
   "version": "0.1.0",
-  "description": "",
-  "main": "./dist/index.js",
+  "description": "Native javascript bridge for the Umbraco Backoffice.",
+  "author": "Umbraco (https://www.umbraco.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge.git"
+  },
+  "keywords": [
+    "umbraco",
+    "cms",
+    "backoffice",
+    "headless",
+    "heartcore",
+    "cloud"
+  ],
+  "bugs": {
+    "url": "https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/issues"
+  },
+  "homepage": "https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge#readme",
+  "license": "MIT",
+  "module": "./lib/index.min.js",
+  "browser": "./headless-backoffice-bridge.min.js",
+  "types": "./lib/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "build:watch": "npm run build -- --watch",
+    "build": "wireit",
+    "build:rollup": "wireit",
+    "build:ts": "wireit",
     "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix",
-    "start": "npm run build:watch",
+    "lint:fix": "eslint . --fix",
+    "start": "npm run build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Umbraco (https://www.umbraco.com)",
-  "license": "MIT",
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "build:rollup",
+        "build:ts"
+      ]
+    },
+    "build:rollup": {
+      "command": "rollup -c",
+      "files": [
+        "rollup.config.json"
+      ],
+      "output": [
+        "headless-backoffice-bridge.min.js{,.map}"
+      ]
+    },
+    "build:ts": {
+      "command": "tsc --build --pretty",
+      "clean": "if-file-deleted",
+      "files": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ],
+      "output": [
+        "lib"
+      ]
+    }
+  },
+  "files": [
+    "/lib/",
+    "headless-backoffice-bridge.min.js{,.map}"
+  ],
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./types.js": {
+      "types": "./lib/types.d.ts",
+      "default": "./lib/types.js"
+    },
+    "./base/index.js": {
+      "types": "./lib/base/index.d.ts",
+      "default": "./lib/base/index.js"
+    },
+    "./base/angular/index.js": {
+      "types": "./lib/base/angular/index.d.ts",
+      "default": "./lib/base/angular/index.js"
+    },
+    "./components/index.js": {
+      "types": "./lib/components/index.d.ts",
+      "default": "./lib/components/index.js"
+    },
+    "./components/image/index.js": {
+      "types": "./lib/components/image/index.d.ts",
+      "default": "./lib/components/image/index.js"
+    },
+    "./components/tinymce/index.js": {
+      "types": "./lib/components/tinymce/index.d.ts",
+      "default": "./lib/components/tinymce/index.js"
+    },
+    "./pickers/index.js": {
+      "types": "./lib/pickers/index.d.ts",
+      "default": "./lib/pickers/index.js"
+    },
+    "./pickers/content/index.js": {
+      "types": "./lib/pickers/content/index.d.ts",
+      "default": "./lib/pickers/content/index.js"
+    },
+    "./pickers/media/index.js": {
+      "types": "./lib/pickers/media/index.d.ts",
+      "default": "./lib/pickers/media/index.js"
+    }
+  },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
@@ -26,11 +118,11 @@
     "eslint-plugin-n": "^15.2.2",
     "eslint-plugin-promise": "^4.3.1",
     "rollup": "^2.75.6",
-    "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-summary": "^1.4.3",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.3",
+    "wireit": "^0.7.0"
   },
   "dependencies": {
     "lit": "^2.2.5"

@@ -1,7 +1,14 @@
-dist/
-docs/
-node_modules/
-temp/
+/.wireit/
+/base/
+/components/
+/lib/
+/node_modules/
+/pickers/
 
+/headless-backoffice-bridge.min.*
+/index.*
+/types.*
+
+.DS_Store
 *.log
 

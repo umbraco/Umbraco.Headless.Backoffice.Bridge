@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
-import { getService } from '../../base/angular'
+import { getService } from '../../base/angular/index.js'
 
 const $compile = getService('$compile')
 const $rootScope = getService('$rootScope')
@@ -37,8 +37,7 @@ export default class extends LitElement {
 
   set value (value: string) { this.#scope.model.value = value }
 
-  #dataTypeKey: string | undefined
-  #template = (scope: any) => {}
+  #template: (scope: any) => string = () => ''
   #scope: any = {}
 
   #defaultToolbar = [
@@ -76,6 +75,7 @@ export default class extends LitElement {
     }
 
     this.#scope.$watch('model.value', (newValue: string, oldValue: string) => {
+      if (newValue === oldValue) return
       const event = new InputEvent('input', { bubbles: true, composed: true })
       this.dispatchEvent(event)
     })

@@ -1,9 +1,9 @@
 import { LitElement, html } from 'lit'
 import { customElement, property, state } from 'lit/decorators.js'
-import { Coordinates, FocalPoint, Udi } from '../../types'
-import { getService } from '../../base/angular'
+import { Coordinates, FocalPoint, Udi } from '../../types.js'
+import { getService } from '../../base/angular/index.js'
 
-type Media = {
+interface Media {
   metaData?: {
     MediaPath?: string
   }
@@ -29,7 +29,7 @@ export default class extends LitElement {
   mode?: Mode
 
   @property({ type: String })
-  // @ts-ignore
+  // @ts-expect-error
   udi: Udi
 
   @property({ type: Number })

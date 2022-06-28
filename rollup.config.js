@@ -3,17 +3,13 @@ import { terser } from 'rollup-plugin-terser'
 import resolve from '@rollup/plugin-node-resolve'
 import summary from 'rollup-plugin-summary'
 import typescript from '@rollup/plugin-typescript'
-import cleaner from 'rollup-plugin-cleaner'
+
+import pkg from './package.json'
 
 export default {
   input: './src/index.ts',
   plugins: [
-    cleaner({
-      targets: [
-        './dist/'
-      ]
-    }),
-    typescript(),
+    typescript({ tsconfig: './tsconfig.json' }),
     resolve(),
     terser({
       ecma: 2020,
@@ -23,7 +19,8 @@ export default {
     summary()
   ],
   output: {
-    dir: './dist',
+    file: pkg.browser,
+    exports: 'named',
     format: 'es',
     sourcemap: true
   },
