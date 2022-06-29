@@ -1,46 +1,54 @@
-import { LitElement, html } from 'lit'
+import { LitElement, TemplateResult, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { getService } from '../../base/angular/index.js'
 
 const $compile = getService('$compile')
 const $rootScope = getService('$rootScope')
 
+/**
+ * The TinyMCE editing mode.
+ */
 export enum EditingMode {
+  /** Full editor mode. */
   Classic = 'classic',
-  DistractionFree = 'distractoin-free'
+  /** Distraction free mode. */
+  DistractionFree = 'distraction-free'
 }
 
+/**
+ * An element wrapping the TinyMCE editor.
+ *
+ * @example
+ *
+ * Renders a Rich Text Editor in distraction free modd with a link, unlink and a media picker button on the toolbar and the max size of the image inserted of 200.
+ *
+ * ```html
+ * <umbh-tinymce mode="distraction-free" maximagesize="200" toolbar='["link", "unlink", "umbmediapicker"]'></umbh-tinymce>
+ * ```
+ *
+ * @remarks
+ * Cannot be used inside ShadowDom.
+ */
 @customElement('umbh-tinymce')
-export default class extends LitElement {
-  @property({ type: Number, attribute: 'max-image-size' })
-  get maxImageSize (): number { return this.#scope.model.config.editor.maxImageSize }
-
-  set maxImageSize (value: number) { this.#scope.model.config.editor.maxImageSize = value }
-
-  @property({ type: String })
-  get mode (): EditingMode { return this.#scope.model.config.editor.mode }
-
-  set mode (value: EditingMode) { this.#scope.model.config.editor.mode = value }
-
-  @property({ type: Array, attribute: false })
-  get stylesheets (): string[] { return this.#scope.model.config.editor.stylesheets }
-
-  set stylesheets (value: string[]) { this.#scope.model.config.editor.stylesheets = value }
-
-  @property({ type: Array, attribute: false })
-  get toolbar (): string[] { return this.#scope.model.config.editor.toolbar }
-
-  set toolbar (value: string[]) { this.#scope.model.config.editor.toolbar = value === undefined || value === null ? this.#defaultToolbar : value }
-
-  @property({ type: String })
-  get value (): string { return this.#scope.model.value }
-
-  set value (value: string) { this.#scope.model.value = value }
-
+export default class TinyMceElement extends LitElement {
   #template: (scope: any) => string = () => ''
   #scope: any = {}
 
-  #defaultToolbar = [
+  /** Max size of image when inserted. */
+  @property({ type: Number })
+  maxImageSize: number = 500
+
+  /** The editing mode. */
+  @property({ type: String })
+  mode = EditingMode.Classic
+
+  /** Stylesheets to load, must be the name of the stylesheet from the stylesheets tree without the `.css` extension.. */
+  @property({ type: Array })
+  stylesheets: string[] = []
+
+  /** The tooblar options. */
+  @property({ type: Array })
+  toolbar = [
     'ace',
     'styleselect',
     'bold',
@@ -58,6 +66,10 @@ export default class extends LitElement {
     'umbembeddialog'
   ]
 
+  /** The value */
+  @property({ type: String })
+  value?: string
+
   constructor () {
     super()
 
@@ -67,9 +79,9 @@ export default class extends LitElement {
       view: 'rte',
       config: {
         editor: {
-          mode: EditingMode.Classic,
-          stylesheets: [],
-          toolbar: this.#defaultToolbar
+          mode: this.mode,
+          stylesheets: this.stylesheets,
+          toolbar: this.toolbar
         }
       }
     }
@@ -81,8 +93,10 @@ export default class extends LitElement {
     })
   }
 
+  /** @ignore */
   createRenderRoot (): HTMLElement { return this }
 
+  /** @ignore */
   connectedCallback (): void {
     super.connectedCallback()
 
@@ -109,7 +123,28 @@ export default class extends LitElement {
       : '<ng-form><umb-property-editor model="model"></umb-property-editor></ng-form>')
   }
 
-  render (): any {
+  /** @ignore */
+  willUpdate (changedProperties: Map<PropertyKey, unknown>): void {
+    if (changedProperties.has('maxImageSize')) {
+      this.#scope.model.config.editor.maxImageSize = this.maxImageSize
+    }
+    if (changedProperties.has('mode')) {
+      this.#scope.model.config.editor.mode = this.mode
+    }
+    if (changedProperties.has('stylesheets')) {
+      this.#scope.model.config.editor.stylesheets = this.stylesheets
+    }
+    if (changedProperties.has('toolbar')) {
+      this.#scope.model.config.editor.toolbar = this.toolbar
+    }
+    if (changedProperties.has('value')) {
+      this.#scope.model.config.editor.value = this.value
+    }
+  }
+
+  /** @ignore */
+  render (): TemplateResult {
+    console.log(this.#scope.model)
     return html`${this.#template(this.#scope)}`
   }
 }

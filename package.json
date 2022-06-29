@@ -28,6 +28,7 @@
     "build": "wireit",
     "build:rollup": "wireit",
     "build:ts": "wireit",
+    "docs": "wireit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "start": "npm run build --watch",
@@ -43,6 +44,7 @@
     "build:rollup": {
       "command": "rollup -c",
       "files": [
+        "src/**/*.ts",
         "rollup.config.json"
       ],
       "output": [
@@ -58,6 +60,18 @@
       ],
       "output": [
         "lib"
+      ]
+    },
+    "docs": {
+      "command": "typedoc --options .typedoc.cjs",
+      "clean": "if-file-deleted",
+      "files": [
+        "src/**/*.ts",
+        ".typedoc.cjs",
+        "README.md"
+      ],
+      "output": [
+        "docs"
       ]
     }
   },
@@ -121,6 +135,8 @@
     "rollup-plugin-summary": "^1.4.3",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
+    "typedoc": "^0.23.2",
+    "typedoc-plugin-markdown": "^3.13.1",
     "typescript": "^4.7.3",
     "wireit": "^0.7.0"
   },

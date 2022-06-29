@@ -1,15 +1,13 @@
 /**
  * Represents an entity identifier.
- * @public
  *
  * @remarks
- * An Udi can be fully qualified or "closed" eg umb://document/\{guid\} "open" eg umb://document.
+ * An Udi can be fully qualified or "closed" eg `umb://document/{guid}` "open" eg `umb://document`.
  */
 export type Udi = String
 
 /**
  * Represents a set of coordinates.
- * @public
  */
 export interface Coordinates {
   x1: Number
@@ -20,7 +18,6 @@ export interface Coordinates {
 
 /**
  * Represents a focal point.
- * @public
  */
 export interface FocalPoint {
   left: Number
@@ -28,10 +25,9 @@ export interface FocalPoint {
 }
 
 /**
- * Represents a crop size.
- * @public
+ * Represents a size.
  */
-export interface CropSize {
+export interface Size {
   height: Number
   width: Number
 }
