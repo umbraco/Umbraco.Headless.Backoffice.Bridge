@@ -6,7 +6,7 @@
 
 An element wrapping the TinyMCE editor.
 
-**`example`** Renders a Rich Text Editor in distraction free modd with a link, unlink and a media picker button on the toolbar and the max size of the image inserted of 200.
+**`example`** Renders a Rich Text Editor in distraction free mode with a link, unlink and a media picker button on the toolbar and the max size of the image inserted of 200.
 
 ```html
 <umbh-tinymce mode="distraction-free" maximagesize="200" toolbar='["link", "unlink", "umbmediapicker"]'></umbh-tinymce>
