@@ -19,7 +19,7 @@ The image display mode.
 
 • **Cover**
 
-Renders a `div` with the image as the backgroun.
+Renders a `div` with the image as the background.
 
 #### Defined in
 
