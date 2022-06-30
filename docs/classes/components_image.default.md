@@ -54,7 +54,7 @@ The image alt text.
 
 #### Defined in
 
-[src/components/image/index.ts:36](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L36)
+[src/components/image/index.ts:36](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L36)
 
 ___
 
@@ -66,7 +66,7 @@ If specified the image will be cropped based on the value.
 
 #### Defined in
 
-[src/components/image/index.ts:40](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L40)
+[src/components/image/index.ts:40](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L40)
 
 ___
 
@@ -78,7 +78,7 @@ If specified and the image is cropped the focal point is used to determine the c
 
 #### Defined in
 
-[src/components/image/index.ts:44](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L44)
+[src/components/image/index.ts:44](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L44)
 
 ___
 
@@ -90,7 +90,7 @@ The height of the image element.
 
 #### Defined in
 
-[src/components/image/index.ts:57](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L57)
+[src/components/image/index.ts:57](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L57)
 
 ___
 
@@ -102,7 +102,7 @@ Determines how the image is rendered
 
 #### Defined in
 
-[src/components/image/index.ts:48](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L48)
+[src/components/image/index.ts:48](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L48)
 
 ___
 
@@ -114,7 +114,7 @@ The UDI of the image to show.
 
 #### Defined in
 
-[src/components/image/index.ts:53](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L53)
+[src/components/image/index.ts:53](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L53)
 
 ___
 
@@ -126,4 +126,4 @@ The width of the image element.
 
 #### Defined in
 
-[src/components/image/index.ts:61](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L61)
+[src/components/image/index.ts:61](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L61)

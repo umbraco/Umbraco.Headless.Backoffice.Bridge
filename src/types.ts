@@ -2,7 +2,7 @@
  * Represents an entity identifier.
  *
  * @remarks
- * A UDI can be fully qualified or "closed" eg `umb://document/{guid}` "open" eg `umb://document`.
+ * An UDI can be fully qualified or "closed" eg `umb://document/{guid}` "open" eg `umb://document`.
  */
 export type Udi = String
 

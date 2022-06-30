@@ -23,7 +23,7 @@ Represents a set of coordinates.
 
 #### Defined in
 
-[src/types.ts:13](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L13)
+[src/types.ts:13](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L13)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:14](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L14)
+[src/types.ts:14](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L14)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[src/types.ts:15](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L15)
+[src/types.ts:15](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L15)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[src/types.ts:16](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L16)
+[src/types.ts:16](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L16)

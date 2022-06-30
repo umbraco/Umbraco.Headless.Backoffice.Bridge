@@ -22,8 +22,8 @@
 
 Represents an entity identifier.
 
-**`remarks`** An Udi can be fully qualified or "closed" eg `umb://document/{guid}` "open" eg `umb://document`.
+**`remarks`** A UDI can be fully qualified or "closed" eg `umb://document/{guid}` "open" eg `umb://document`.
 
 #### Defined in
 
-[src/types.ts:7](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L7)
+[src/types.ts:7](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L7)

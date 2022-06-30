@@ -23,7 +23,7 @@ Full editor mode.
 
 #### Defined in
 
-[src/components/tinymce/index.ts:13](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/tinymce/index.ts#L13)
+[src/components/tinymce/index.ts:13](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/tinymce/index.ts#L13)
 
 ___
 
@@ -35,4 +35,4 @@ Distraction free mode.
 
 #### Defined in
 
-[src/components/tinymce/index.ts:15](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/tinymce/index.ts#L15)
+[src/components/tinymce/index.ts:15](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/tinymce/index.ts#L15)

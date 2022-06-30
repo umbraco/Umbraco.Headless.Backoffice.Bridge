@@ -26,7 +26,7 @@ The image alt text.
 
 #### Defined in
 
-[src/pickers/media/index.ts:9](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L9)
+[src/pickers/media/index.ts:9](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L9)
 
 ___
 
@@ -38,7 +38,7 @@ The image alt caption.
 
 #### Defined in
 
-[src/pickers/media/index.ts:11](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L11)
+[src/pickers/media/index.ts:11](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L11)
 
 ___
 
@@ -50,7 +50,7 @@ The image crop coordinates.
 
 #### Defined in
 
-[src/pickers/media/index.ts:13](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L13)
+[src/pickers/media/index.ts:13](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L13)
 
 ___
 
@@ -62,7 +62,7 @@ The image focal point.
 
 #### Defined in
 
-[src/pickers/media/index.ts:15](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L15)
+[src/pickers/media/index.ts:15](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L15)
 
 ___
 
@@ -74,4 +74,4 @@ The UDI of the Media item.
 
 #### Defined in
 
-[src/pickers/media/index.ts:17](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L17)
+[src/pickers/media/index.ts:17](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L17)

@@ -21,7 +21,7 @@ Represents a size.
 
 #### Defined in
 
-[src/types.ts:31](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L31)
+[src/types.ts:31](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L31)
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[src/types.ts:32](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L32)
+[src/types.ts:32](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L32)

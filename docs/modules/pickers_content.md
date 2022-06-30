@@ -38,4 +38,4 @@ contentPicker.show({
 
 #### Defined in
 
-[src/pickers/content/index.ts:48](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/content/index.ts#L48)
+[src/pickers/content/index.ts:48](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/content/index.ts#L48)

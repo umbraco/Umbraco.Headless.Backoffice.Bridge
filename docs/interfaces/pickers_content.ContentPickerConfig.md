@@ -23,11 +23,11 @@ The Content Picker configuration.
 
 • `Optional` **multiple**: `Boolean`
 
-Specifies whether or not multiple items can be selected.
+Specifies wether or not multiple items can be selected.
 
 #### Defined in
 
-[src/pickers/content/index.ts:24](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/content/index.ts#L24)
+[src/pickers/content/index.ts:24](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/content/index.ts#L24)
 
 ___
 
@@ -41,7 +41,7 @@ If not specified the tree will start at the root.
 
 #### Defined in
 
-[src/pickers/content/index.ts:21](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/content/index.ts#L21)
+[src/pickers/content/index.ts:21](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/content/index.ts#L21)
 
 ## Methods
 

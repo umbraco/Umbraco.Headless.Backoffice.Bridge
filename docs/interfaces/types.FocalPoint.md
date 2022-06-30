@@ -21,7 +21,7 @@ Represents a focal point.
 
 #### Defined in
 
-[src/types.ts:23](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L23)
+[src/types.ts:23](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L23)
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[src/types.ts:24](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/types.ts#L24)
+[src/types.ts:24](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/types.ts#L24)

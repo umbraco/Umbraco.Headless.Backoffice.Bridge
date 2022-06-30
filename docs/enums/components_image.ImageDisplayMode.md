@@ -23,7 +23,7 @@ Renders a `div` with the image as the background.
 
 #### Defined in
 
-[src/components/image/index.ts:19](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L19)
+[src/components/image/index.ts:19](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L19)
 
 ___
 
@@ -35,4 +35,4 @@ Renders the image in an `img` tag.
 
 #### Defined in
 
-[src/components/image/index.ts:17](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/image/index.ts#L17)
+[src/components/image/index.ts:17](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/image/index.ts#L17)

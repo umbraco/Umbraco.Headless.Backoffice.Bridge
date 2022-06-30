@@ -39,4 +39,4 @@ mediaPicker.show({
 
 #### Defined in
 
-[src/pickers/media/index.ts:68](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L68)
+[src/pickers/media/index.ts:68](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L68)

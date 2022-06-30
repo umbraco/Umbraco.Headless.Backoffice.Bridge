@@ -54,7 +54,7 @@ Max size of image when inserted.
 
 #### Defined in
 
-[src/components/tinymce/index.ts:39](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/tinymce/index.ts#L39)
+[src/components/tinymce/index.ts:39](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/tinymce/index.ts#L39)
 
 ___
 
@@ -66,7 +66,7 @@ The editing mode.
 
 #### Defined in
 
-[src/components/tinymce/index.ts:43](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/tinymce/index.ts#L43)
+[src/components/tinymce/index.ts:43](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/tinymce/index.ts#L43)
 
 ___
 
@@ -78,7 +78,7 @@ Stylesheets to load, must be the name of the stylesheet from the stylesheets tre
 
 #### Defined in
 
-[src/components/tinymce/index.ts:47](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/tinymce/index.ts#L47)
+[src/components/tinymce/index.ts:47](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/tinymce/index.ts#L47)
 
 ___
 
@@ -90,7 +90,7 @@ The tooblar options.
 
 #### Defined in
 
-[src/components/tinymce/index.ts:51](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/tinymce/index.ts#L51)
+[src/components/tinymce/index.ts:51](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/tinymce/index.ts#L51)
 
 ___
 
@@ -102,4 +102,4 @@ The value
 
 #### Defined in
 
-[src/components/tinymce/index.ts:71](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/components/tinymce/index.ts#L71)
+[src/components/tinymce/index.ts:71](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/components/tinymce/index.ts#L71)

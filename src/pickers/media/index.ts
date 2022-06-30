@@ -27,7 +27,7 @@ export interface MediaPickerConfig {
   /** Specifies whether selecttion folders is disabled or not. */
   disableFolderSelect?: Boolean
   /**
-   * Udi of the Media item where the tree should start.
+   * UDI of the Media item where the tree should start.
    *
    * If not specified the tree will start at the root.
    */

@@ -33,7 +33,7 @@ Specifies whether or not editing the Image in the Media Library in an inline dia
 
 #### Defined in
 
-[src/pickers/media/index.ts:22](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L22)
+[src/pickers/media/index.ts:22](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L22)
 
 ___
 
@@ -45,7 +45,7 @@ If specified the image will be cropped to the size. The user will be able to sel
 
 #### Defined in
 
-[src/pickers/media/index.ts:24](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L24)
+[src/pickers/media/index.ts:24](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L24)
 
 ___
 
@@ -57,7 +57,7 @@ Specifies whether the Focal Point is disabled or not.
 
 #### Defined in
 
-[src/pickers/media/index.ts:26](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L26)
+[src/pickers/media/index.ts:26](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L26)
 
 ___
 
@@ -69,7 +69,7 @@ Specifies whether selecttion folders is disabled or not.
 
 #### Defined in
 
-[src/pickers/media/index.ts:28](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L28)
+[src/pickers/media/index.ts:28](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L28)
 
 ___
 
@@ -81,7 +81,7 @@ Specifies whether or not multiple items can be selected.
 
 #### Defined in
 
-[src/pickers/media/index.ts:38](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L38)
+[src/pickers/media/index.ts:38](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L38)
 
 ___
 
@@ -89,11 +89,11 @@ ___
 
 • `Optional` **onlyFolders**: `Boolean`
 
-Specifies wether or not only folders can be selected.
+Specifies whether or not only folders can be selected.
 
 #### Defined in
 
-[src/pickers/media/index.ts:42](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L42)
+[src/pickers/media/index.ts:42](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L42)
 
 ___
 
@@ -105,7 +105,7 @@ Specifies whether or not only images can be selected.
 
 #### Defined in
 
-[src/pickers/media/index.ts:40](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L40)
+[src/pickers/media/index.ts:40](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L40)
 
 ___
 
@@ -117,7 +117,7 @@ Specifies whether or not alt text, caption, focal point and crop can be edited.
 
 #### Defined in
 
-[src/pickers/media/index.ts:44](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L44)
+[src/pickers/media/index.ts:44](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L44)
 
 ___
 
@@ -125,13 +125,13 @@ ___
 
 • `Optional` **startMedia**: `String`
 
-UDI of the Media item where the tree should start.
+Udi of the Media item where the tree should start.
 
 If not specified the tree will start at the root.
 
 #### Defined in
 
-[src/pickers/media/index.ts:34](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L34)
+[src/pickers/media/index.ts:34](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L34)
 
 ___
 
@@ -143,7 +143,7 @@ If defined a dialog allowing editing alt text, caption, focal point and crop wil
 
 #### Defined in
 
-[src/pickers/media/index.ts:36](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/556873b/src/pickers/media/index.ts#L36)
+[src/pickers/media/index.ts:36](https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge/blob/70258f2/src/pickers/media/index.ts#L36)
 
 ## Methods
 
