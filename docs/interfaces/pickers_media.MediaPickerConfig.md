@@ -29,7 +29,7 @@
 
 • `Optional` **allowMediaEdit**: `Boolean`
 
-Specifies wether or not editing the Image in the Media Library in an inline dialog is allowed.
+Specifies whether or not editing the Image in the Media Library in an inline dialog is allowed.
 
 #### Defined in
 
@@ -53,7 +53,7 @@ ___
 
 • `Optional` **disableFocalPoint**: `Boolean`
 
-Specifies wether the Focal Point is disabled or not.
+Specifies whether the Focal Point is disabled or not.
 
 #### Defined in
 
@@ -65,7 +65,7 @@ ___
 
 • `Optional` **disableFolderSelect**: `Boolean`
 
-Specifies wether selecttion folders is disabled or not.
+Specifies whether selecttion folders is disabled or not.
 
 #### Defined in
 
@@ -77,7 +77,7 @@ ___
 
 • `Optional` **multiple**: `Boolean`
 
-Specifies wether or not multiple items can be selected.
+Specifies whether or not multiple items can be selected.
 
 #### Defined in
 
@@ -101,7 +101,7 @@ ___
 
 • `Optional` **onlyImages**: `Boolean`
 
-Specifies wether or not only images can be selected.
+Specifies whether or not only images can be selected.
 
 #### Defined in
 
@@ -113,7 +113,7 @@ ___
 
 • `Optional` **showDetails**: `Boolean`
 
-Specifies wether or not alt text, caption, focal point and crop can be edited.
+Specifies whether or not alt text, caption, focal point and crop can be edited.
 
 #### Defined in
 
@@ -125,7 +125,7 @@ ___
 
 • `Optional` **startMedia**: `String`
 
-Udi of the Media item where the tree should start.
+UDI of the Media item where the tree should start.
 
 If not specified the tree will start at the root.
 
