@@ -35,7 +35,7 @@ ___
 
 • `Optional` **startContent**: `String`
 
-Udi of the Content item where the tree should start.
+UDI of the Content item where the tree should start.
 
 If not specified the tree will start at the root.
 
