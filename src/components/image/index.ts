@@ -15,7 +15,7 @@ interface Media {
 export enum ImageDisplayMode {
   /** Renders the image in an `img` tag. */
   Default = '',
-  /** Renders a `div` with the image as the backgroun. */
+  /** Renders a `div` with the image as the background. */
   Cover = 'cover'
 }
 
