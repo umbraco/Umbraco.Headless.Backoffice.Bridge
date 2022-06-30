@@ -23,7 +23,7 @@ The Content Picker configuration.
 
 • `Optional` **multiple**: `Boolean`
 
-Specifies wether or not multiple items can be selected.
+Specifies whether or not multiple items can be selected.
 
 #### Defined in
 
