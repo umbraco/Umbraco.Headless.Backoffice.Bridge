@@ -32,6 +32,7 @@ export enum EditingMode {
 @customElement('umbh-tinymce')
 export default class TinyMceElement extends LitElement {
   #template: (scope: any) => string = () => ''
+  #linkedTemplate?: string
   #scope: any = {}
 
   /** Max size of image when inserted. */
@@ -88,6 +89,7 @@ export default class TinyMceElement extends LitElement {
 
     this.#scope.$watch('model.value', (newValue: string, oldValue: string) => {
       if (newValue === oldValue) return
+      this.value = newValue
       const event = new InputEvent('input', { bubbles: true, composed: true })
       this.dispatchEvent(event)
     })
@@ -126,25 +128,28 @@ export default class TinyMceElement extends LitElement {
   /** @ignore */
   willUpdate (changedProperties: Map<PropertyKey, unknown>): void {
     if (changedProperties.has('maxImageSize')) {
-      this.#scope.model.config.editor.maxImageSize = this.maxImageSize
+      this.#scope.$apply(() => this.#scope.model.config.editor.maxImageSize = this.maxImageSize)
     }
     if (changedProperties.has('mode')) {
-      this.#scope.model.config.editor.mode = this.mode
+      this.#scope.$apply(() => this.#scope.model.config.editor.mode = this.mode)
     }
     if (changedProperties.has('stylesheets')) {
-      this.#scope.model.config.editor.stylesheets = this.stylesheets
+      this.#scope.$apply(() => this.#scope.model.config.editor.stylesheets = this.stylesheets)
     }
     if (changedProperties.has('toolbar')) {
-      this.#scope.model.config.editor.toolbar = this.toolbar
+      this.#scope.$apply(() => this.#scope.model.config.editor.toolbar = this.toolbar)
     }
     if (changedProperties.has('value')) {
-      this.#scope.model.config.editor.value = this.value
+      this.#scope.$apply(() => this.#scope.model.value = this.value)
+    }
+
+    if (this.#linkedTemplate === undefined) {
+      this.#linkedTemplate = this.#template(this.#scope)
     }
   }
 
   /** @ignore */
   render (): TemplateResult {
-    console.log(this.#scope.model)
-    return html`${this.#template(this.#scope)}`
+    return html`${this.#linkedTemplate}`
   }
 }
