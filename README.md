@@ -6,7 +6,7 @@ This repository contains helpers and components providing native javascript inte
 
 The library is available through CDN and can be used directly in a custom editor.
 
-To import and register the custom elements, making them available to use call the following at the beginnig of you editor
+To import and register the custom elements making them available to use, call the following at the beginning of your editor
 
 ```js
 // import a specific version
@@ -63,7 +63,7 @@ npx http-server --cors -c-1
 
 This will start a http server with cors enabled and caching disabled (usually on http://127.0.0.1:8080).
 
-Then in your custom editor in Heartcore you can import the library
+In your custom editor in Heartcore you can then import the library
 
 ```js
 import 'http://127.0.0.1:8080/headless-backoffice-bridge.min.js';
