@@ -14,7 +14,7 @@ export interface ContentPickerItem {
  */
 export interface ContentPickerConfig {
   /**
-   * Udi of the Content item where the tree should start.
+   * UDI of the Content item where the tree should start.
    *
    * If not specified the tree will start at the root.
    */
