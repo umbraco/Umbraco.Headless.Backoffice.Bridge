@@ -9,7 +9,7 @@ The library is available through CDN and can be used directly in a custom editor
 To import and register the custom elements making them available to use, call the following at the beginning of your editor
 
 ```js
-// import a specific version
+// import latest version
 import "https://cdn.jsdelivr.net/npm/@umbraco/headless-backoffice-bridge@latest/headless-backoffice-bridge.min.js";
 
 // import a specific version
