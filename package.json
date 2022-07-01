@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/umbraco/Umbraco.Headless.Backoffice.Bridge#readme",
   "license": "MIT",
-  "module": "./lib/index.min.js",
+  "module": "./lib/index.js",
   "browser": "./headless-backoffice-bridge.min.js",
   "types": "./lib/index.d.ts",
   "type": "module",
