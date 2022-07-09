@@ -85,5 +85,5 @@ This will update the documentation located in the `docs` directory.
 
 If you encounter a bug when using this library you are welcome to open an issue in the issue tracker of this repository. We always welcome Pull Request and please feel free to open an issue before submitting a Pull Request to discuss what you want to submit.
 
-Questions about usage should be posted to the Headless forum on [our.umbraco.com](https://our.umbraco.com/forum/umbraco-heartcore/.
+Questions about usage should be posted to the Headless forum on [our.umbraco.com](https://our.umbraco.com/forum/umbraco-heartcore/).
 
